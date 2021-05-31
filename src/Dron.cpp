@@ -81,11 +81,11 @@ Dron::Dron()
  */
 Dron::Dron(Wektor3D PolozenieDrona,double Kat, std::string Nazwa)
 {
-    Korpus = Prostopadloscian(PolozenieDrona, Kat, "../data/" + Nazwa + "_Korpus.dat", "../BrylyWzorcowe/ProstopadloscianWzorcowy.dat" );
-    Rotor[0] = Graniastoslup(Korpus[1], Kat, "../data/" + Nazwa+"_Rotor1.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat");
-    Rotor[1] = Graniastoslup(Korpus[2], Kat, "../data/" + Nazwa+"_Rotor2.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat");
-    Rotor[2] = Graniastoslup(Korpus[5], Kat, "../data/" + Nazwa+"_Rotor3.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat");
-    Rotor[3] = Graniastoslup(Korpus[6], Kat, "../data/" + Nazwa+"_Rotor4.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat");
+    Korpus = Prostopadloscian(PolozenieDrona, Kat, "../data/" + Nazwa + "_Korpus.dat", "../BrylyWzorcowe/ProstopadloscianWzorcowy.dat", Wektor3D{5,5,5});
+    Rotor[0] = Graniastoslup(Korpus[1], Kat, "../data/" + Nazwa+"_Rotor1.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat", Wektor3D{4,4,4});
+    Rotor[1] = Graniastoslup(Korpus[2], Kat, "../data/" + Nazwa+"_Rotor2.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat", Wektor3D{4,4,4});
+    Rotor[2] = Graniastoslup(Korpus[5], Kat, "../data/" + Nazwa+"_Rotor3.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat", Wektor3D{4,4,4});
+    Rotor[3] = Graniastoslup(Korpus[6], Kat, "../data/" + Nazwa+"_Rotor4.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat", Wektor3D{4,4,4});
     KatOrientacji=Kat;
     while(KatOrientacji<= -360 || KatOrientacji >= 360)
   {
@@ -396,6 +396,12 @@ bool Dron::RysujTrasePoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnup
 bool Dron::PrzemiescDrona(double Odleglosc, double Kat, PzG::LaczeDoGNUPlota  &LaczeDoGnuplota)
     {
         int i=0;
+
+        if(Odleglosc<0)
+            {
+            std::cout << std::endl << "Odleglosc nie moze byc ujemna!" << std::endl;
+            return false;
+            }
         std::cout <<std::endl << "Rysowanie trasy..." << std::endl;     //Rysowanie trasy
         if(!(*this).RysujTrase(Odleglosc, Kat, LaczeDoGnuplota))
             {
@@ -519,6 +525,11 @@ bool Dron::RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplota)
 
         int i=0;
 
+        if(Promien<0)
+            {
+            std::cout << std::endl << "Promien nie moze być ujemny!" << std::endl;
+            return false;
+            }
 
         Wektor3D WspolPoloz = Polozenie;
         double Kat = KatOrientacji;

@@ -12,6 +12,22 @@ CMakeFiles/engine.dir/src/Dron.cpp.o: ../include/Wektor3D.hh
 CMakeFiles/engine.dir/src/Dron.cpp.o: ../include/lacze_do_gnuplota.hh
 CMakeFiles/engine.dir/src/Dron.cpp.o: ../src/Dron.cpp
 
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/BrylaGeometryczna.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/GoraZGrania.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/Macierz.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/Macierz3x3.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/Wektor.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../include/Wektor3D.hh
+CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../src/GoraZGrania.cpp
+
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/BrylaGeometryczna.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/GoraZeSzczytem.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/Macierz.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/Macierz3x3.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/Wektor.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../include/Wektor3D.hh
+CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../src/GoraZeSzczytem.cpp
+
 CMakeFiles/engine.dir/src/Graniastoslup.cpp.o: ../include/BrylaGeometryczna.hh
 CMakeFiles/engine.dir/src/Graniastoslup.cpp.o: ../include/Graniastoslup.hh
 CMakeFiles/engine.dir/src/Graniastoslup.cpp.o: ../include/Macierz.hh
@@ -25,6 +41,14 @@ CMakeFiles/engine.dir/src/Macierz3x3.cpp.o: ../include/Macierz3x3.hh
 CMakeFiles/engine.dir/src/Macierz3x3.cpp.o: ../include/Wektor.hh
 CMakeFiles/engine.dir/src/Macierz3x3.cpp.o: ../include/Wektor3D.hh
 CMakeFiles/engine.dir/src/Macierz3x3.cpp.o: ../src/Macierz3x3.cpp
+
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/BrylaGeometryczna.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/Macierz.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/Macierz3x3.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/Plaskowyz.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/Wektor.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../include/Wektor3D.hh
+CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../src/Plaskowyz.cpp
 
 CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o: ../include/BrylaGeometryczna.hh
 CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o: ../include/Macierz.hh

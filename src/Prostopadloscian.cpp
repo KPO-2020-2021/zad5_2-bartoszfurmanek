@@ -22,6 +22,7 @@ Prostopadloscian& Prostopadloscian::operator= (const Prostopadloscian P)
   KatOrientacji = P.Orientacja();
   NazwaBryly = P.NazwaPlikuBryly();
   NazwaBrylyWzorcowej = P.NazwaPlikuBrylyWzorcowej();
+  Skala = P.SkalaBryly();
   return(*this);
 }
 
@@ -127,11 +128,16 @@ BrylaGeometryczna(TB_Prostopadloscian), Polozenie({0,0,0}), KatOrientacji(0)
  *  \param[in] Kat - Kat orientacji prostopadloscianu.
  *  \param[in] NazwaBryly - Nazwa pliku z wspolrzednymi bryly finalnej.
  *  \param[in] NazwaWzorca - Nazwa pliku z wspolrzednymi bryly wzorcowej.
+ *  \param[in] SkalaBryly - Skala rozmiaru w jakim prostopadloscian ma zostac stworzony
  */
-Prostopadloscian::Prostopadloscian(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca):
-BrylaGeometryczna(TB_Prostopadloscian, Nazwa, NazwaWzorca), Polozenie(WspolPolozenia), KatOrientacji(Kat)
+Prostopadloscian::Prostopadloscian(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly):
+BrylaGeometryczna(TB_Prostopadloscian, Nazwa, NazwaWzorca, SkalaBryly), Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
+for(int i=0; i<16; i++)
+  {
+  Wierzcholek[i]=(*this).Skaluj(Wierzcholek[i]);
+  }
 (*this).Obrot(Kat, 'z');
 (*this).Translacja(WspolPolozenia);
 while(KatOrientacji<= -360 || KatOrientacji >= 360)     //Usuniecie okresowosci kata.
@@ -153,7 +159,7 @@ Polozenie=WspolPolozenia;
  * \param[in] P - Prostopadloscian ktory ma zostac skopiowany.
  */
 Prostopadloscian::Prostopadloscian(const Prostopadloscian &P):
-BrylaGeometryczna(TB_Prostopadloscian, P.NazwaPlikuBryly(), P.NazwaPlikuBrylyWzorcowej()), Polozenie(P.WspolPolozenia()), KatOrientacji(P.Orientacja())
+BrylaGeometryczna(TB_Prostopadloscian, P.NazwaPlikuBryly(), P.NazwaPlikuBrylyWzorcowej(), P.SkalaBryly()), Polozenie(P.WspolPolozenia()), KatOrientacji(P.Orientacja())
 {
   for(int i=0; i<16; i++)
     {
@@ -345,6 +351,10 @@ StrmWej >> Wierzcholek[15];
     if(!(*this).OdczytajBryleWzorcowa())
       {
       return false;
+      }
+    for(int i=0; i<16; i++)
+      {
+      Wierzcholek[i]=(*this).Skaluj(Wierzcholek[i]);
       }
     (*this).Obrot(KatOrientacji, 'z');
     (*this).Translacja(Polozenie);

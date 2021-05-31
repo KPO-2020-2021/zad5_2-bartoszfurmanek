@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek"
+CMAKE_SOURCE_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build"
+CMAKE_BINARY_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,14 +91,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/CMakeFiles" "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/tests/CMakeFiles/progress.marks"
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/CMakeFiles" 0
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/tests/CMakeFiles/progress.marks"
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,22 +108,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+tests/CMakeFiles/fulltest.dir/rule:
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/fulltest.dir/rule
+.PHONY : tests/CMakeFiles/fulltest.dir/rule
+
+# Convenience name for target.
+fulltest: tests/CMakeFiles/fulltest.dir/rule
+
+.PHONY : fulltest
+
+# fast build rule for target.
+fulltest/fast:
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/fulltest.dir/build.make tests/CMakeFiles/fulltest.dir/build
+.PHONY : fulltest/fast
+
+# Convenience name for target.
 tests/CMakeFiles/coverage.dir/rule:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/coverage.dir/rule
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/coverage.dir/rule
 .PHONY : tests/CMakeFiles/coverage.dir/rule
 
 # Convenience name for target.
@@ -133,12 +148,12 @@ coverage: tests/CMakeFiles/coverage.dir/rule
 
 # fast build rule for target.
 coverage/fast:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/coverage.dir/build.make tests/CMakeFiles/coverage.dir/build
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/coverage.dir/build.make tests/CMakeFiles/coverage.dir/build
 .PHONY : coverage/fast
 
 # Convenience name for target.
 tests/CMakeFiles/unit_tests.dir/rule:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_tests.dir/rule
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_tests.dir/rule
 .PHONY : tests/CMakeFiles/unit_tests.dir/rule
 
 # Convenience name for target.
@@ -148,7 +163,7 @@ unit_tests: tests/CMakeFiles/unit_tests.dir/rule
 
 # fast build rule for target.
 unit_tests/fast:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
 main.o: main.cpp.o
@@ -157,7 +172,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.o
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -166,7 +181,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.i
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -175,7 +190,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.s
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -187,6 +202,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... fulltest"
 	@echo "... coverage"
 	@echo "... unit_tests"
 	@echo "... main.o"
@@ -203,6 +219,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

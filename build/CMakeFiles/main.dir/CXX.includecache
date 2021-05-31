@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 ../include/BrylaGeometryczna.hh
+string
+-
+Wektor3D.hh
+../include/Wektor3D.hh
 
 ../include/Dron.hh
 string
@@ -20,6 +24,34 @@ Wektor3D.hh
 lacze_do_gnuplota.hh
 ../include/lacze_do_gnuplota.hh
 unistd.h
+-
+
+../include/GoraZGrania.hh
+iostream
+-
+Wektor3D.hh
+../include/Wektor3D.hh
+Macierz3x3.hh
+../include/Macierz3x3.hh
+BrylaGeometryczna.hh
+../include/BrylaGeometryczna.hh
+iomanip
+-
+fstream
+-
+
+../include/GoraZeSzczytem.hh
+iostream
+-
+Wektor3D.hh
+../include/Wektor3D.hh
+Macierz3x3.hh
+../include/Macierz3x3.hh
+BrylaGeometryczna.hh
+../include/BrylaGeometryczna.hh
+iomanip
+-
+fstream
 -
 
 ../include/Graniastoslup.hh
@@ -58,17 +90,27 @@ Wektor3D.hh
 Macierz.hh
 ../include/Macierz.hh
 
+../include/Plaskowyz.hh
+iostream
+-
+Wektor3D.hh
+../include/Wektor3D.hh
+Macierz3x3.hh
+../include/Macierz3x3.hh
+BrylaGeometryczna.hh
+../include/BrylaGeometryczna.hh
+iomanip
+-
+fstream
+-
+
 ../include/Prostopadloscian.hh
 iostream
 -
 Wektor3D.hh
 ../include/Wektor3D.hh
-Wektor.hh
-../include/Wektor.hh
 Macierz3x3.hh
 ../include/Macierz3x3.hh
-Macierz.hh
-../include/Macierz.hh
 BrylaGeometryczna.hh
 ../include/BrylaGeometryczna.hh
 tgmath.h
@@ -108,25 +150,27 @@ list
 vector
 -
 
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/main.cpp
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/main.cpp
 ../tests/doctest/doctest.h
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/tests/doctest/doctest.h
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/tests/doctest/doctest.h
 iostream
 -
 stdlib.h
 -
-Prostopadloscian.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/Prostopadloscian.hh
 lacze_do_gnuplota.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/lacze_do_gnuplota.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/lacze_do_gnuplota.hh
 Scena.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/Scena.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/Scena.hh
 exampleConfig.h
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/exampleConfig.h
-Dron.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/Dron.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/exampleConfig.h
+Plaskowyz.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/Plaskowyz.hh
+GoraZGrania.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/GoraZGrania.hh
+GoraZeSzczytem.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/GoraZeSzczytem.hh
 
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/tests/doctest/doctest.h
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/tests/doctest/doctest.h
 signal.h
 -
 iosfwd
@@ -140,7 +184,7 @@ ciso646
 type_traits
 -
 doctest_fwd.h
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/tests/doctest/doctest_fwd.h
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/tests/doctest/doctest_fwd.h
 ctime
 -
 cmath

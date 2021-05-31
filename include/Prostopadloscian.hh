@@ -3,9 +3,7 @@
 
 #include <iostream>
 #include "Wektor3D.hh"
-#include "Wektor.hh"
 #include "Macierz3x3.hh"
-#include "Macierz.hh"
 #include "BrylaGeometryczna.hh"
 #include <tgmath.h>
 #include <math.h>
@@ -112,7 +110,7 @@ class Prostopadloscian: public BrylaGeometryczna {
 /*!
  * \brief Konstruktor parametryczny.
  */
-  Prostopadloscian(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca);
+  Prostopadloscian(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly);
 
 /*!
  * \brief Konstruktor kopiujacy.

@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 ../include/BrylaGeometryczna.hh
+string
+-
+Wektor3D.hh
+../include/Wektor3D.hh
 
 ../include/Dron.hh
 string
@@ -63,12 +67,8 @@ iostream
 -
 Wektor3D.hh
 ../include/Wektor3D.hh
-Wektor.hh
-../include/Wektor.hh
 Macierz3x3.hh
 ../include/Macierz3x3.hh
-Macierz.hh
-../include/Macierz.hh
 BrylaGeometryczna.hh
 ../include/BrylaGeometryczna.hh
 tgmath.h
@@ -79,6 +79,12 @@ iomanip
 -
 fstream
 -
+
+../include/Scena.hh
+Dron.hh
+../include/Dron.hh
+lacze_do_gnuplota.hh
+../include/lacze_do_gnuplota.hh
 
 ../include/Wektor.hh
 iostream
@@ -102,9 +108,7 @@ list
 vector
 -
 
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/src/Dron.cpp
-Dron.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/src/Dron.hh
-Wektor3D.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/src/Wektor3D.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp
+Scena.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.hh
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17
 
 CXX_DEFINES = -DENABLE_DOCTEST_IN_LIBRARY
 
-CXX_INCLUDES = -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build" -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/include" -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/external/doctest/doctest" 
+CXX_INCLUDES = -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build" -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include" -I"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest" 
 

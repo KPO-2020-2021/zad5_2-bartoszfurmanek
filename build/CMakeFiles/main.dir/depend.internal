@@ -4,14 +4,17 @@
 CMakeFiles/main.dir/app/main.cpp.o
  ../include/BrylaGeometryczna.hh
  ../include/Dron.hh
+ ../include/GoraZGrania.hh
+ ../include/GoraZeSzczytem.hh
  ../include/Graniastoslup.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/Plaskowyz.hh
  ../include/Prostopadloscian.hh
  ../include/Scena.hh
  ../include/Wektor.hh
  ../include/Wektor3D.hh
  ../include/lacze_do_gnuplota.hh
- /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/app/main.cpp
- /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/tests/doctest/doctest.h
+ /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/main.cpp
+ /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/tests/doctest/doctest.h
  exampleConfig.h

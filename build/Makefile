@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek"
+CMAKE_SOURCE_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build"
+CMAKE_BINARY_DIR = "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/CMakeFiles" "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -525,6 +525,19 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
+# Target rules for targets named fulltest
+
+# Build rule for target.
+fulltest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fulltest
+.PHONY : fulltest
+
+# fast build rule for target.
+fulltest/fast:
+	$(MAKE) -f tests/CMakeFiles/fulltest.dir/build.make tests/CMakeFiles/fulltest.dir/build
+.PHONY : fulltest/fast
+
+#=============================================================================
 # Target rules for targets named coverage
 
 # Build rule for target.
@@ -604,6 +617,60 @@ src/Dron.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/Dron.cpp.s
 .PHONY : src/Dron.cpp.s
 
+src/GoraZGrania.o: src/GoraZGrania.cpp.o
+
+.PHONY : src/GoraZGrania.o
+
+# target to build an object file
+src/GoraZGrania.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZGrania.cpp.o
+.PHONY : src/GoraZGrania.cpp.o
+
+src/GoraZGrania.i: src/GoraZGrania.cpp.i
+
+.PHONY : src/GoraZGrania.i
+
+# target to preprocess a source file
+src/GoraZGrania.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZGrania.cpp.i
+.PHONY : src/GoraZGrania.cpp.i
+
+src/GoraZGrania.s: src/GoraZGrania.cpp.s
+
+.PHONY : src/GoraZGrania.s
+
+# target to generate assembly for a file
+src/GoraZGrania.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZGrania.cpp.s
+.PHONY : src/GoraZGrania.cpp.s
+
+src/GoraZeSzczytem.o: src/GoraZeSzczytem.cpp.o
+
+.PHONY : src/GoraZeSzczytem.o
+
+# target to build an object file
+src/GoraZeSzczytem.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o
+.PHONY : src/GoraZeSzczytem.cpp.o
+
+src/GoraZeSzczytem.i: src/GoraZeSzczytem.cpp.i
+
+.PHONY : src/GoraZeSzczytem.i
+
+# target to preprocess a source file
+src/GoraZeSzczytem.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.i
+.PHONY : src/GoraZeSzczytem.cpp.i
+
+src/GoraZeSzczytem.s: src/GoraZeSzczytem.cpp.s
+
+.PHONY : src/GoraZeSzczytem.s
+
+# target to generate assembly for a file
+src/GoraZeSzczytem.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.s
+.PHONY : src/GoraZeSzczytem.cpp.s
+
 src/Graniastoslup.o: src/Graniastoslup.cpp.o
 
 .PHONY : src/Graniastoslup.o
@@ -657,6 +724,33 @@ src/Macierz3x3.s: src/Macierz3x3.cpp.s
 src/Macierz3x3.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/Macierz3x3.cpp.s
 .PHONY : src/Macierz3x3.cpp.s
+
+src/Plaskowyz.o: src/Plaskowyz.cpp.o
+
+.PHONY : src/Plaskowyz.o
+
+# target to build an object file
+src/Plaskowyz.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/Plaskowyz.cpp.o
+.PHONY : src/Plaskowyz.cpp.o
+
+src/Plaskowyz.i: src/Plaskowyz.cpp.i
+
+.PHONY : src/Plaskowyz.i
+
+# target to preprocess a source file
+src/Plaskowyz.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/Plaskowyz.cpp.i
+.PHONY : src/Plaskowyz.cpp.i
+
+src/Plaskowyz.s: src/Plaskowyz.cpp.s
+
+.PHONY : src/Plaskowyz.s
+
+# target to generate assembly for a file
+src/Plaskowyz.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/src/Plaskowyz.cpp.s
+.PHONY : src/Plaskowyz.cpp.s
 
 src/Prostopadloscian.o: src/Prostopadloscian.cpp.o
 
@@ -779,6 +873,7 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
+	@echo "... fulltest"
 	@echo "... coverage"
 	@echo "... unit_tests"
 	@echo "... app/main.o"
@@ -787,12 +882,21 @@ help:
 	@echo "... src/Dron.o"
 	@echo "... src/Dron.i"
 	@echo "... src/Dron.s"
+	@echo "... src/GoraZGrania.o"
+	@echo "... src/GoraZGrania.i"
+	@echo "... src/GoraZGrania.s"
+	@echo "... src/GoraZeSzczytem.o"
+	@echo "... src/GoraZeSzczytem.i"
+	@echo "... src/GoraZeSzczytem.s"
 	@echo "... src/Graniastoslup.o"
 	@echo "... src/Graniastoslup.i"
 	@echo "... src/Graniastoslup.s"
 	@echo "... src/Macierz3x3.o"
 	@echo "... src/Macierz3x3.i"
 	@echo "... src/Macierz3x3.s"
+	@echo "... src/Plaskowyz.o"
+	@echo "... src/Plaskowyz.i"
+	@echo "... src/Plaskowyz.s"
 	@echo "... src/Prostopadloscian.o"
 	@echo "... src/Prostopadloscian.i"
 	@echo "... src/Prostopadloscian.s"

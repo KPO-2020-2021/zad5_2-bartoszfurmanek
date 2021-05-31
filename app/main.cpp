@@ -8,13 +8,13 @@
 
 #include <iostream>
 #include <stdlib.h>
-#include "Prostopadloscian.hh"
 #include "lacze_do_gnuplota.hh"
 #include "Scena.hh"
-
 #include "exampleConfig.h"
+#include "Plaskowyz.hh"
+#include "GoraZGrania.hh"
+#include "GoraZeSzczytem.hh"
 
-#include "Dron.hh"
 
 
 
@@ -31,18 +31,6 @@ int main() {
 
     Sc.DodajDrona(1, {20,20,0}, 0, "Dron1");                //Dodanie dronow do scemy
     Sc.DodajDrona(2, {20,100,0}, 0, "Dron2");
-  
-    Sc.DodajNazwePliku("../data/Dron1_Korpus.dat");         //Zapisanie nazwy plikow z brylami dronow
-    Sc.DodajNazwePliku("../data/Dron1_Rotor1.dat");
-    Sc.DodajNazwePliku("../data/Dron1_Rotor2.dat");
-    Sc.DodajNazwePliku("../data/Dron1_Rotor3.dat");
-    Sc.DodajNazwePliku("../data/Dron1_Rotor4.dat");
-
-    Sc.DodajNazwePliku("../data/Dron2_Korpus.dat");
-    Sc.DodajNazwePliku("../data/Dron2_Rotor1.dat");
-    Sc.DodajNazwePliku("../data/Dron2_Rotor2.dat");
-    Sc.DodajNazwePliku("../data/Dron2_Rotor3.dat");
-    Sc.DodajNazwePliku("../data/Dron2_Rotor4.dat");
     
     Sc.NumerAktywnegoDrona()=1;                            //Domyslnie dron pierwszy jest aktywny
 
@@ -161,15 +149,5 @@ int main() {
             }
           }
       }
-
-
-
-
-
-
-
-
-
-
 return 0;
 }

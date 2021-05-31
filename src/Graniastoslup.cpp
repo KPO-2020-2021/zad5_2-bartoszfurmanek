@@ -22,6 +22,7 @@ Graniastoslup& Graniastoslup::operator= (const Graniastoslup G)
   KatOrientacji = G.Orientacja();
   NazwaBryly = G.NazwaPlikuBryly();
   NazwaBrylyWzorcowej = G.NazwaPlikuBrylyWzorcowej();
+  Skala = G.SkalaBryly();
   return(*this);
 }
 
@@ -107,7 +108,6 @@ Wektor3D& Graniastoslup::operator [](int Indeks)
       Polozenie += Wierzcholek[17];
       Polozenie += Wierzcholek[21];
       Polozenie = (1.0/6)* Polozenie;
-
   }
 
 /*!
@@ -128,11 +128,16 @@ BrylaGeometryczna(TB_Graniastoslup), Polozenie({0,0,0}), KatOrientacji(0)
  *  \param[in] Kat - Kat orientacji graniastoslupu.
  *  \param[in] NazwaBryly - Nazwa pliku z wspolrzednymi bryly finalnej.
  *  \param[in] NazwaWzorca - Nazwa pliku z wspolrzednymi bryly wzorcowej.
+ *  \param[in] SkalaBryly - Skala rozmiaru w jakim graniastoslup ma zostac stworzony
  */
-Graniastoslup::Graniastoslup(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca):
-BrylaGeometryczna(TB_Graniastoslup, Nazwa, NazwaWzorca), Polozenie(WspolPolozenia), KatOrientacji(Kat)
+Graniastoslup::Graniastoslup(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly):
+BrylaGeometryczna(TB_Graniastoslup, Nazwa, NazwaWzorca, SkalaBryly), Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
+for(int i=0; i<24; i++)
+  {
+  Wierzcholek[i]=(*this).Skaluj(Wierzcholek[i]);
+  }
 (*this).Obrot(Kat, 'z');
 (*this).Translacja(WspolPolozenia);
 while(KatOrientacji<= -360 || KatOrientacji >= 360)     //Usuniecie okresowosci kata.
@@ -154,7 +159,7 @@ Polozenie=WspolPolozenia;
  * \param[in] G - Graniastoslup ktory ma zostac skopiowany.
  */
 Graniastoslup::Graniastoslup(const Graniastoslup &G):
-BrylaGeometryczna(TB_Graniastoslup, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej()), Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
+BrylaGeometryczna(TB_Graniastoslup, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej(), G.SkalaBryly()), Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
 {
   for(int i=0; i<24; i++)
     {
@@ -365,6 +370,10 @@ StrmWej >> Wierzcholek[23];
     if(!(*this).OdczytajBryleWzorcowa())
       {
       return false;
+      }
+    for(int i=0; i<24; i++)
+      {
+      Wierzcholek[i]=(*this).Skaluj(Wierzcholek[i]);
       }
     (*this).Obrot(KatOrientacji, 'z');
     (*this).Translacja(Polozenie);

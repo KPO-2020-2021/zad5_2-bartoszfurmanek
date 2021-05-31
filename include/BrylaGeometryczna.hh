@@ -1,6 +1,9 @@
 #ifndef BRYLAGEOMETRYCZNA_HH
 #define BRYLAGEOMETRYCZNA_HH
 
+#include <string>
+#include "Wektor3D.hh"
+
 /*!
  * \file 
  * \brief Definicja klasy BrylaGeometryczna.
@@ -14,9 +17,12 @@
  *  dana bryla.
  */
 enum TypBrylyGeometrycznej { 
-      TB_Zadna              /*! Nie jest to żadna konkretna figura geometryczna */,  
-      TB_Prostopadloscian    /*! Figura geometryczna jest kawadratem */,
-      TB_Graniastoslup      /*! Figura geometryczna jest kołem */
+      TB_Zadna              /*! Nie jest to żadna konkretna bryla geometryczna */,  
+      TB_Prostopadloscian   /*! Bryla geometryczna jest prostopadlsocianem */,
+      TB_Graniastoslup      /*! Bryla geometryczna jest graniastoslupem */,
+      TB_Plaskowyz          /*! Bryla geometryczna jest plaskowyzem */,
+      TB_GoraZeSzczytem     /*! Bryla geometryczna jest gora z ostrym sczytem */,
+      TB_GoraZGrania        /*! Bryla geometryczna jest gora z dluga grania */
    };
 
 
@@ -49,13 +55,18 @@ class BrylaGeometryczna {
   std::string NazwaBrylyWzorcowej;
 
 /*!
+ * \brief Skala wielkosci bryly geometrycznej
+ */
+  Wektor3D Skala;
+
+/*!
  * \brief Konstruktor parametryczny dla Bryly Geometrycznej
  * \param[in] Typ - identyfikator typu bryly geoemtrycznej. Domyslnie TB_Zadna
  * \param[in] Nazwa - Nazwa pliku przechowujacego wspolrzedne bryly finalnej. Domyslnie nazwa jest pusta.
  * \param[in] NazwaWzorca - Nazwa pliku przechowujacego wspolrzedne bryly wzorcowej. Domyslnie nazwa jest pusta.
  */
-  BrylaGeometryczna(TypBrylyGeometrycznej Typ = TB_Zadna, std::string Nazwa=" ", std::string NazwaWzorca=" "): 
-  _TypBryly(Typ), NazwaBryly(Nazwa), NazwaBrylyWzorcowej(NazwaWzorca) {}
+  BrylaGeometryczna(TypBrylyGeometrycznej Typ = TB_Zadna, std::string Nazwa=" ", std::string NazwaWzorca=" ", Wektor3D SkalaBryly={1,1,1}): 
+  _TypBryly(Typ), NazwaBryly(Nazwa), NazwaBrylyWzorcowej(NazwaWzorca), Skala(SkalaBryly) {}
 
 
   public:
@@ -80,6 +91,21 @@ class BrylaGeometryczna {
  */
   std::string NazwaPlikuBrylyWzorcowej()const
   {return NazwaBrylyWzorcowej;}
+
+/*!
+ * \brief Skaluje zadany wektor.
+ * \param[in] W - Wektor ktory ma zostac wyskalowany.
+ * \return Wyskalowany wektor.
+ */
+  Wektor3D Skaluj(Wektor3D W)
+  {return Wektor3D{W[0]*Skala[0],W[1]*Skala[1],W[2]*Skala[2]};}
+
+/*!
+ * \brief Metoda uzyskujaca skale bryly.
+ * \return Skala bryly.
+ */
+  Wektor3D SkalaBryly()const
+  {return Skala;}
 
 };
 

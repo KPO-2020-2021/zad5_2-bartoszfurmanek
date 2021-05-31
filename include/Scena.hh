@@ -56,7 +56,7 @@
 /*!
  *\brief Metoda dodajaca do lacza gnuplot nazwe pliku z rysowana bryla.
  */
- bool DodajNazwePliku(const char *NazwaPliku);
+ bool DodajNazwePliku(std::string NazwaPliku);
 
 /*!
  *\brief Metoda uzyskujaca polozenie wybranego drona.

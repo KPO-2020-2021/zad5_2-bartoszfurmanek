@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek
-# Build directory: /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_1-bartoszfurmanek/build
+# Source directory: /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek
+# Build directory: /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

@@ -36,16 +36,22 @@ void Scena::DodajDrona(int NrDrona, Wektor3D Polozenie, double Kat, std::string 
         throw std::runtime_error("Blad: Zly numer drona");
         }
     TabDronow[NrDrona-1]=Dron(Polozenie, Kat, NazwaDrona);
-    TabDronow[NrDrona-1].ZapiszBryly();     
+    TabDronow[NrDrona-1].ZapiszBryly();
+    (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Korpus.dat");
+    (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor1.dat");
+    (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor2.dat");
+    (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor3.dat");
+    (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor4.dat");
 }
 
 /*!
  *\brief Metoda dodaje do lacza nazwe pliku, z bryla ktora ma zostac rysowana.
  *\param[in] NazwaPliku - nazwa pliku, ktora ma zostac dodana do lacza.
  */
-bool Scena::DodajNazwePliku(const char *NazwaPliku)
+bool Scena::DodajNazwePliku(const std::string NazwaPliku)
 {
-    if(Lacze.DodajNazwePliku(NazwaPliku,PzG::RR_Ciagly,2))
+    const char *Nazwa= NazwaPliku.c_str();
+    if(Lacze.DodajNazwePliku(Nazwa,PzG::RR_Ciagly,2))
         {
         return true;
         }

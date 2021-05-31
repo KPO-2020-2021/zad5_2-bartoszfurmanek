@@ -112,7 +112,7 @@ class Graniastoslup: public BrylaGeometryczna {
 /*!
  * \brief Konstruktor parametryczny.
  */
-  Graniastoslup(Wektor3D WspolPolozenia, double Kat, std::string NazwaBryly, std::string NazwaWzorca);
+  Graniastoslup(Wektor3D WspolPolozenia, double Kat, std::string NazwaBryly, std::string NazwaWzorca, Wektor3D SkalaBryly);
 
 /*!
  * \brief Konstruktor kopiujacy.
