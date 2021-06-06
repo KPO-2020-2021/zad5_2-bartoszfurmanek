@@ -112,7 +112,7 @@ GoraZeSzczytem& GoraZeSzczytem::operator= (const GoraZeSzczytem G)
  *\brief Konstruktor bezparamateryczny gory.
  */
 GoraZeSzczytem::GoraZeSzczytem():
-BrylaGeometryczna(TB_GoraZeSzczytem), Polozenie({0,0,0}), KatOrientacji(0)
+BrylaGeometryczna(TB_GoraZeSzczytem), ObiektSceny(OB_GoraZeSzczytem), Polozenie({0,0,0}), KatOrientacji(0)
 {
   for(int i=0; i<24; i++)
     {
@@ -129,7 +129,7 @@ BrylaGeometryczna(TB_GoraZeSzczytem), Polozenie({0,0,0}), KatOrientacji(0)
  *  \param[in] SkalaBryly - Skala, mowiaca o rozmiarze bryly.
  */
 GoraZeSzczytem::GoraZeSzczytem(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly):
-BrylaGeometryczna(TB_GoraZeSzczytem, Nazwa, NazwaWzorca, SkalaBryly), Polozenie(WspolPolozenia), KatOrientacji(Kat)
+BrylaGeometryczna(TB_GoraZeSzczytem, Nazwa, NazwaWzorca, SkalaBryly), ObiektSceny(OB_GoraZeSzczytem), Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
 Wierzcholek[2]= Wektor3D{0,0,1};          //Przeksztalcenie gornych wierzcholkow aby utworzyly szpiczasty szczyt gory
@@ -156,6 +156,7 @@ while(KatOrientacji<= -360 || KatOrientacji >= 360)     //Usuniecie okresowosci 
     }    
   }
 Polozenie=WspolPolozenia;
+(*this).ZapiszBryle();
 }
 
 /*!
@@ -163,12 +164,13 @@ Polozenie=WspolPolozenia;
  * \param[in] P - Gora ktory ma zostac skopiowany.
  */
 GoraZeSzczytem::GoraZeSzczytem(const GoraZeSzczytem &G):
-BrylaGeometryczna(TB_GoraZeSzczytem, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej(), G.SkalaBryly()), Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
+BrylaGeometryczna(TB_GoraZeSzczytem, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej(), G.SkalaBryly()), ObiektSceny(OB_GoraZeSzczytem), Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
 {
   for(int i=0; i<24; i++)
     {
     Wierzcholek[i] = G[i];
     }
+  (*this).ZapiszBryle();
 }
 
 /*!
@@ -326,3 +328,9 @@ StrmWej >> Wierzcholek[23];
   StrmPlikowy.close();
   return !StrmPlikowy.fail();
   }
+
+std::string GoraZeSzczytem::WezNazweBryly(int NumerBryly)const
+{
+  NumerBryly++;
+  return (*this).NazwaPlikuBryly();
+}

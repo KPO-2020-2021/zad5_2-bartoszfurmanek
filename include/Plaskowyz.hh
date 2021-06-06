@@ -7,6 +7,7 @@
 #include "BrylaGeometryczna.hh"
 #include <iomanip>
 #include <fstream>
+#include "ObiektSceny.hh"
 
 
 /*!
@@ -25,7 +26,7 @@
  * do rysowania w gnuplocie. Klasa dziedziczy po klasie BrylaGeometryczna.
  *
  */
-class Plaskowyz: public BrylaGeometryczna{
+class Plaskowyz: public BrylaGeometryczna, public ObiektSceny{
 
 /*!
  * \brief Wierzcholki
@@ -141,6 +142,7 @@ public:
  */
   bool OdczytajBryleWzorcowa();
 
+  std::string WezNazweBryly(int NumerBryly)const;
 
 
 };

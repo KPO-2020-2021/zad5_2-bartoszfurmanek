@@ -42,11 +42,11 @@ set(SOURCES          # All .cpp files in src/
     src/Prostopadloscian.cpp
     src/lacze_do_gnuplota.cpp
     src/Graniastoslup.cpp
-    src/Dron.cpp
-    src/Scena.cpp
     src/Plaskowyz.cpp
     src/GoraZGrania.cpp
     src/GoraZeSzczytem.cpp
+    src/Dron.cpp
+    src/Scena.cpp
 )
 set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp

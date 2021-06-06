@@ -66,6 +66,7 @@ class Prostopadloscian: public BrylaGeometryczna {
  */
   Prostopadloscian& operator= (const Prostopadloscian P);
 
+
 /*!
  * \brief Indeksowanie wierzcholkow prostopadloscianu.
  */

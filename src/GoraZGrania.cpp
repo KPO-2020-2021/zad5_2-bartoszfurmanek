@@ -111,7 +111,7 @@ GoraZGrania& GoraZGrania::operator= (const GoraZGrania G)
  *\brief Konstruktor bezparamateryczny gory.
  */
 GoraZGrania::GoraZGrania():
-BrylaGeometryczna(TB_GoraZGrania), Polozenie({0,0,0}), KatOrientacji(0)
+BrylaGeometryczna(TB_GoraZGrania), ObiektSceny(OB_GoraZGrania), Polozenie({0,0,0}), KatOrientacji(0)
 {
   for(int i=0; i<16; i++)
     {
@@ -128,7 +128,7 @@ BrylaGeometryczna(TB_GoraZGrania), Polozenie({0,0,0}), KatOrientacji(0)
  *  \param[in] SkalaBryly - Skala, mowiaca o rozmiarze bryly.
  */
 GoraZGrania::GoraZGrania(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly):
-BrylaGeometryczna(TB_GoraZGrania, Nazwa, NazwaWzorca, SkalaBryly), Polozenie(WspolPolozenia), KatOrientacji(Kat)
+BrylaGeometryczna(TB_GoraZGrania, Nazwa, NazwaWzorca, SkalaBryly), ObiektSceny(OB_GoraZGrania), Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
 Wierzcholek[1]= Wektor3D{0,-5,10};          //Przeksztalcenie gornych wierzcholkow aby utworzyly granie gory.
@@ -153,6 +153,7 @@ while(KatOrientacji<= -360 || KatOrientacji >= 360)     //Usuniecie okresowosci 
     }    
   }
 Polozenie=WspolPolozenia;
+(*this).ZapiszBryle();
 }
 
 /*!
@@ -160,12 +161,13 @@ Polozenie=WspolPolozenia;
  * \param[in] G - Gora ktory ma zostac skopiowany.
  */
 GoraZGrania::GoraZGrania(const GoraZGrania &G):
-BrylaGeometryczna(TB_GoraZGrania, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej(), G.SkalaBryly()), Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
+BrylaGeometryczna(TB_GoraZGrania, G.NazwaPlikuBryly(), G.NazwaPlikuBrylyWzorcowej(), G.SkalaBryly()), ObiektSceny(OB_GoraZGrania),  Polozenie(G.WspolPolozenia()), KatOrientacji(G.Orientacja())
 {
   for(int i=0; i<16; i++)
     {
     Wierzcholek[i] = G[i];
     }
+  (*this).ZapiszBryle();
 }
 
 /*!
@@ -303,3 +305,9 @@ StrmWej >> Wierzcholek[15];
   StrmPlikowy.close();
   return !StrmPlikowy.fail();
   }
+
+std::string GoraZGrania::WezNazweBryly(int NumerBryly)const
+{
+  NumerBryly++;
+  return (*this).NazwaPlikuBryly();
+}

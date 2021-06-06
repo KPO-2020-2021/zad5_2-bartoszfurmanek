@@ -9,6 +9,7 @@ CMakeFiles/main.dir/app/main.cpp.o
  ../include/Graniastoslup.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
  ../include/Plaskowyz.hh
  ../include/Prostopadloscian.hh
  ../include/Scena.hh

@@ -2,9 +2,13 @@
 #define SCENA_HH
 
 #include "Dron.hh"
+#include "Plaskowyz.hh"
+#include "GoraZeSzczytem.hh"
+#include "GoraZGrania.hh"
 #include "lacze_do_gnuplota.hh"
+#include <list>
+#include <memory>
 
-#define ILOSC_DRONOW 2
 
 
 
@@ -23,10 +27,10 @@
  class Scena{
 
 /*!
- *\brief Tablica dronowa.
- *Atrybut jest tablica przechowujaca 2 obiekty klasy dron.
+ *\brief Lista obiektow sceny
+ * Atrybut jest lista wszystkich obiektow znajdujacych sie na scenie.
  */
- Dron  TabDronow[ILOSC_DRONOW];
+ std::list<std::shared_ptr<ObiektSceny>> ListaObiektow;
 
 /*!
  *\brief Lacze do gnuplota.
@@ -51,17 +55,13 @@
 /*!
  *\brief Metoda dodajaca drona do sceny.
  */
- void DodajDrona(int NrDrona, Wektor3D Polozenie, double Kat, std::string NazwaDrona);
+ void DodajDrona(Wektor3D Polozenie, double Kat, std::string NazwaDrona);
 
 /*!
  *\brief Metoda dodajaca do lacza gnuplot nazwe pliku z rysowana bryla.
  */
  bool DodajNazwePliku(std::string NazwaPliku);
 
-/*!
- *\brief Metoda uzyskujaca polozenie wybranego drona.
- */
- Wektor3D PolozenieDrona(int NrDrona)const;
 
 /*!
  *\brief Metoda uzyskujaca numer aktywnego drona.
@@ -76,7 +76,18 @@
 /*!
  *\brief Metoda uzyskujaca dostep do aktywnego drona.
  */
- Dron& AktywnyDron();
+ Dron* AktywnyDron();
+
+/*!
+ *\brief Metoda wypisujaca liste dronow.
+ */
+ void ListaDronow();
+
+ void ListaPrzeszkod();
+
+ bool UsunPrzeszkode(int NumerPrzeszkody);
+
+ void DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody);
 
 /*!
  *\brief Metoda wyswietlajaca w sposob aniomowany obrot aktynwego drona o zadany kat,

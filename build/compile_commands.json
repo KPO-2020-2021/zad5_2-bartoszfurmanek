@@ -21,16 +21,6 @@
 },
 {
   "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
-  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Dron.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp\"",
-  "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp"
-},
-{
-  "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
-  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Scena.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp\"",
-  "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp"
-},
-{
-  "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Plaskowyz.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Plaskowyz.cpp\"",
   "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Plaskowyz.cpp"
 },
@@ -43,6 +33,16 @@
   "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZeSzczytem.cpp\"",
   "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZeSzczytem.cpp"
+},
+{
+  "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Dron.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp\"",
+  "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp"
+},
+{
+  "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/include\" -I\"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/external/doctest/doctest\"  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Scena.cpp.o -c \"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp\"",
+  "file": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp"
 },
 {
   "directory": "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build",

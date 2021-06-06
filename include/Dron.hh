@@ -9,6 +9,7 @@
 #include "Wektor3D.hh"
 #include "lacze_do_gnuplota.hh"
 #include <unistd.h>
+#include "ObiektSceny.hh"
 
 
 
@@ -25,7 +26,7 @@
  * przelatywac pewna odleglosc. Dodatkowo dron moze obracac swoimi rotorami.
  *
  */
-class Dron{
+class Dron: public ObiektSceny{
 
 /*!
  *\brief Korpus drona
@@ -70,6 +71,11 @@ void TransformujDoUkladuGlobalnego();
 void ObliczPolozenie();
 
 public:
+
+/*!
+ *\brief Operator przypisania dla klasy Dron.
+ */
+Dron& operator=(Dron D);
 
 /*!
  *\brief Metoda uzyskujaca wektor3D reprezentujacy wspolrzedne polozenia drona.
@@ -160,6 +166,8 @@ bool UzyjWzorca();
  * zadanym promieniu.
  */
  bool RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplot);
+
+ std::string WezNazweBryly(int NumerBryly)const;
 
 };
 

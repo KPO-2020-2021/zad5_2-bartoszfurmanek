@@ -36,7 +36,6 @@ enum TypBrylyGeometrycznej {
  */
 class BrylaGeometryczna {
 
-  private:
 /*!
  * \brief Identyfikator rodzaju figury geometrycznej
  */

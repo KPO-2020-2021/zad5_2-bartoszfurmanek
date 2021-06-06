@@ -25,6 +25,8 @@ lacze_do_gnuplota.hh
 ../include/lacze_do_gnuplota.hh
 unistd.h
 -
+ObiektSceny.hh
+../include/ObiektSceny.hh
 
 ../include/GoraZGrania.hh
 iostream
@@ -39,6 +41,8 @@ iomanip
 -
 fstream
 -
+ObiektSceny.hh
+../include/ObiektSceny.hh
 
 ../include/GoraZeSzczytem.hh
 iostream
@@ -53,6 +57,8 @@ iomanip
 -
 fstream
 -
+ObiektSceny.hh
+../include/ObiektSceny.hh
 
 ../include/Graniastoslup.hh
 iostream
@@ -90,6 +96,12 @@ Wektor3D.hh
 Macierz.hh
 ../include/Macierz.hh
 
+../include/ObiektSceny.hh
+lacze_do_gnuplota.hh
+../include/lacze_do_gnuplota.hh
+BrylaGeometryczna.hh
+../include/BrylaGeometryczna.hh
+
 ../include/Plaskowyz.hh
 iostream
 -
@@ -103,6 +115,8 @@ iomanip
 -
 fstream
 -
+ObiektSceny.hh
+../include/ObiektSceny.hh
 
 ../include/Prostopadloscian.hh
 iostream
@@ -125,8 +139,18 @@ fstream
 ../include/Scena.hh
 Dron.hh
 ../include/Dron.hh
+Plaskowyz.hh
+../include/Plaskowyz.hh
+GoraZeSzczytem.hh
+../include/GoraZeSzczytem.hh
+GoraZGrania.hh
+../include/GoraZGrania.hh
 lacze_do_gnuplota.hh
 ../include/lacze_do_gnuplota.hh
+list
+-
+memory
+-
 
 ../include/Wektor.hh
 iostream
@@ -163,12 +187,6 @@ Scena.hh
 /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/Scena.hh
 exampleConfig.h
 /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/exampleConfig.h
-Plaskowyz.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/Plaskowyz.hh
-GoraZGrania.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/GoraZGrania.hh
-GoraZeSzczytem.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/app/GoraZeSzczytem.hh
 
 /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/tests/doctest/doctest.h
 signal.h

@@ -111,7 +111,7 @@ Plaskowyz& Plaskowyz::operator= (const Plaskowyz P)
  *\brief Konstruktor bezparamateryczny plaskowyzu.
  */
 Plaskowyz::Plaskowyz():
-BrylaGeometryczna(TB_Plaskowyz), Polozenie({0,0,0}), KatOrientacji(0)
+BrylaGeometryczna(TB_Plaskowyz), ObiektSceny(OB_Plaskowyz), Polozenie({0,0,0}), KatOrientacji(0)
 {
   for(int i=0; i<16; i++)
     {
@@ -128,7 +128,7 @@ BrylaGeometryczna(TB_Plaskowyz), Polozenie({0,0,0}), KatOrientacji(0)
  *  \param[in] SkalaBryly - Skala, mowiaca o rozmiarze bryly.
  */
 Plaskowyz::Plaskowyz(Wektor3D WspolPolozenia, double Kat, std::string Nazwa, std::string NazwaWzorca, Wektor3D SkalaBryly):
-BrylaGeometryczna(TB_Plaskowyz, Nazwa, NazwaWzorca, SkalaBryly), Polozenie(WspolPolozenia), KatOrientacji(Kat)
+BrylaGeometryczna(TB_Plaskowyz, Nazwa, NazwaWzorca, SkalaBryly), ObiektSceny(OB_Plaskowyz),  Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
 for(int i=0; i<16; i++)
@@ -149,6 +149,7 @@ while(KatOrientacji<= -360 || KatOrientacji >= 360)     //Usuniecie okresowosci 
     }    
   }
 Polozenie=WspolPolozenia;
+(*this).ZapiszBryle();
 }
 
 /*!
@@ -156,12 +157,13 @@ Polozenie=WspolPolozenia;
  * \param[in] P - Plaskowyz ktory ma zostac skopiowany.
  */
 Plaskowyz::Plaskowyz(const Plaskowyz &P):
-BrylaGeometryczna(TB_Plaskowyz, P.NazwaPlikuBryly(), P.NazwaPlikuBrylyWzorcowej(), P.SkalaBryly()), Polozenie(P.WspolPolozenia()), KatOrientacji(P.Orientacja())
+BrylaGeometryczna(TB_Plaskowyz, P.NazwaPlikuBryly(), P.NazwaPlikuBrylyWzorcowej(), P.SkalaBryly()), ObiektSceny(OB_Plaskowyz), Polozenie(P.WspolPolozenia()), KatOrientacji(P.Orientacja())
 {
   for(int i=0; i<16; i++)
     {
     Wierzcholek[i] = P[i];
     }
+  (*this).ZapiszBryle();
 }
 
 /*!
@@ -299,3 +301,9 @@ StrmWej >> Wierzcholek[15];
   StrmPlikowy.close();
   return !StrmPlikowy.fail();
   }
+
+std::string Plaskowyz::WezNazweBryly(int NumerBryly)const
+{
+  NumerBryly++;
+  return (*this).NazwaPlikuBryly();
+}

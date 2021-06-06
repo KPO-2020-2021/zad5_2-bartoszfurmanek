@@ -8,6 +8,7 @@ CMakeFiles/main.dir/app/main.cpp.o: ../include/GoraZeSzczytem.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Graniastoslup.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Macierz.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Macierz3x3.hh
+CMakeFiles/main.dir/app/main.cpp.o: ../include/ObiektSceny.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Plaskowyz.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Prostopadloscian.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../include/Scena.hh

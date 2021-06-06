@@ -7,6 +7,7 @@ CMakeFiles/engine.dir/src/Dron.cpp.o
  ../include/Graniastoslup.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
  ../include/Prostopadloscian.hh
  ../include/Wektor.hh
  ../include/Wektor3D.hh
@@ -17,16 +18,20 @@ CMakeFiles/engine.dir/src/GoraZGrania.cpp.o
  ../include/GoraZGrania.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
  ../include/Wektor.hh
  ../include/Wektor3D.hh
+ ../include/lacze_do_gnuplota.hh
  /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZGrania.cpp
 CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o
  ../include/BrylaGeometryczna.hh
  ../include/GoraZeSzczytem.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
  ../include/Wektor.hh
  ../include/Wektor3D.hh
+ ../include/lacze_do_gnuplota.hh
  /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZeSzczytem.cpp
 CMakeFiles/engine.dir/src/Graniastoslup.cpp.o
  ../include/BrylaGeometryczna.hh
@@ -46,9 +51,11 @@ CMakeFiles/engine.dir/src/Plaskowyz.cpp.o
  ../include/BrylaGeometryczna.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
  ../include/Plaskowyz.hh
  ../include/Wektor.hh
  ../include/Wektor3D.hh
+ ../include/lacze_do_gnuplota.hh
  /home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Plaskowyz.cpp
 CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o
  ../include/BrylaGeometryczna.hh
@@ -61,9 +68,13 @@ CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o
 CMakeFiles/engine.dir/src/Scena.cpp.o
  ../include/BrylaGeometryczna.hh
  ../include/Dron.hh
+ ../include/GoraZGrania.hh
+ ../include/GoraZeSzczytem.hh
  ../include/Graniastoslup.hh
  ../include/Macierz.hh
  ../include/Macierz3x3.hh
+ ../include/ObiektSceny.hh
+ ../include/Plaskowyz.hh
  ../include/Prostopadloscian.hh
  ../include/Scena.hh
  ../include/Wektor.hh

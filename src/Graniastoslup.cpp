@@ -26,6 +26,8 @@ Graniastoslup& Graniastoslup::operator= (const Graniastoslup G)
   return(*this);
 }
 
+
+
 /*!
  * \brief Metoda służąca do indeksowania graniastoslupu.
  *   \param[in] Indeks - indeks zadanego punktu graniastoslupu.

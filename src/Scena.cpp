@@ -29,14 +29,9 @@ Scena::Scena()
  * \param[in] Kat - Kat orientacji drona.
  * \param[in] NazwaDrona - Nazwa drona.
  */
-void Scena::DodajDrona(int NrDrona, Wektor3D Polozenie, double Kat, std::string NazwaDrona)
+void Scena::DodajDrona(Wektor3D Polozenie, double Kat, std::string NazwaDrona)
 {
-    if(NrDrona <= 0 || NrDrona > ILOSC_DRONOW)
-        {
-        throw std::runtime_error("Blad: Zly numer drona");
-        }
-    TabDronow[NrDrona-1]=Dron(Polozenie, Kat, NazwaDrona);
-    TabDronow[NrDrona-1].ZapiszBryly();
+    ListaObiektow.push_back(std::make_shared<Dron>(Polozenie,Kat,NazwaDrona));
     (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Korpus.dat");
     (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor1.dat");
     (*this).DodajNazwePliku("../data/" + NazwaDrona+"_Rotor2.dat");
@@ -61,20 +56,6 @@ bool Scena::DodajNazwePliku(const std::string NazwaPliku)
         }
 }
 
-/*!
- *\brief Metoda uzyskuje wspolrzedne polozenia wybranego drona.
- *\param[in] NrDrona - Numer drona
- *\retval Wektor3D reprezentujacy wspolrzedne polozenia drona.
- */
-Wektor3D Scena::PolozenieDrona(int NrDrona)const
-{
-    if(NrDrona <= 0 || NrDrona > ILOSC_DRONOW)
-    {
-    throw std::runtime_error("Blad: Zly numer drona");
-    }  
-
-    return TabDronow[NrDrona-1].WspolPolozenia();
-}
 
 /*!
  *\brief Metoda uzyskujaca numer aktywnego drona.
@@ -98,9 +79,159 @@ int& Scena::NumerAktywnegoDrona()
  *\brief Metoda uzyskujaca dostep do aktywnego drona.
  *\retval referencja do aktywnego drona.
  */
-Dron& Scena::AktywnyDron()
+Dron* Scena::AktywnyDron()
 {
-    return TabDronow[NrAktywnegoDrona-1];
+    int NumerDrona=1;
+    for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begin();  Iter != ListaObiektow.end();  ++Iter)
+        {
+        if((*Iter)->TypObiektu() == OB_Dron)
+            {
+            if(NumerDrona == (*this).NumerAktywnegoDrona())
+                {
+                return (Dron*) Iter->get();
+                }
+            else
+                {
+                ++NumerDrona;
+                }
+            } 
+        }
+    throw std::runtime_error("Blad: Brak dronow");
+    
+}
+
+/*!
+ *\brief Metoda wypisujaca liste dronow.
+ * Metoda wypisuje wszystkie drony, ktore znajduja sie na liscie obiektow
+ * oraz wskazuje, ktory dron jest aktywny
+ */
+void Scena::ListaDronow()
+{
+Dron* WskDron;
+int i=0;
+for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begin();  Iter != ListaObiektow.end();  ++Iter)
+    {
+    if((*Iter)->TypObiektu() == OB_Dron)
+        {
+        ++i;
+        WskDron = (Dron*) Iter->get();
+        std::cout << i << " - Polozenie drona: (x,y) " << WskDron->WspolPolozenia()[0] << " " << WskDron->WspolPolozenia()[1];
+        if(i == NrAktywnegoDrona)
+            {
+            std::cout<< " <-- Aktywny dron";
+            }
+        std::cout << std::endl;
+        }
+    }
+std::cout << std::endl;
+}
+
+void Scena::ListaPrzeszkod()
+{
+Plaskowyz* WskPlaskowyz;
+GoraZGrania* WskGoraZGrania;
+GoraZeSzczytem* WskGoraZeSzczytem;
+int i=0;
+
+for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begin();  Iter != ListaObiektow.end();  ++Iter)
+    {
+    switch((*Iter)->TypObiektu())
+        {
+        case OB_Plaskowyz:
+            {
+            ++i;
+            WskPlaskowyz = (Plaskowyz*) Iter->get();
+            std::cout << i << " - Plaskowyz o wspolrzednych: (x,y) " << WskPlaskowyz->WspolPolozenia()[0] << " " << WskPlaskowyz->WspolPolozenia()[1] << std::endl;
+            break;
+            }
+        case OB_GoraZGrania:
+            {
+            ++i;
+            WskGoraZGrania = (GoraZGrania*) Iter->get();
+            std::cout << i << " - Gora z grania o wspolrzednych: (x,y) " << WskGoraZGrania->WspolPolozenia()[0] << " " << WskGoraZGrania->WspolPolozenia()[1] << std::endl;
+            break;
+            }
+        case OB_GoraZeSzczytem:
+            {
+            ++i;
+            WskGoraZeSzczytem = (GoraZeSzczytem*) Iter->get();
+            std::cout << i << " - Gora ze szczytem o wspolrzednych: (x,y) " << WskGoraZeSzczytem->WspolPolozenia()[0] << " " << WskGoraZeSzczytem->WspolPolozenia()[1] << std::endl;
+            break;
+            }
+        default:
+            {
+            break;
+            }
+        }
+    }
+std::cout << std::endl;
+}
+
+void Scena::DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody)
+{
+switch(NumerPrzeszkody)
+        {
+        case 1:
+            {
+            ListaObiektow.push_back(std::make_shared<Plaskowyz>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/ProstopadloscianWzorcowy.dat",Skala));
+            (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
+            break;
+            }
+        case 2:
+            {
+            ListaObiektow.push_back(std::make_shared<GoraZGrania>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/ProstopadloscianWzorcowy.dat",Skala));
+            (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
+            break;
+            }
+        case 3:
+            {
+            ListaObiektow.push_back(std::make_shared<GoraZeSzczytem>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/GraniastoslupWzorcowy.dat",Skala));
+            (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
+            break;
+            }
+        default:
+            {
+            break;
+            }
+        }
+}
+
+bool Scena::UsunPrzeszkode(int NumerPrzeszkody)
+{
+int AktualnyNumerPrzeszkody=1;
+for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter1 = ListaObiektow.begin();  Iter1 != ListaObiektow.end();  ++Iter1)
+    {
+    if((*Iter1)->TypObiektu() == OB_Plaskowyz || (*Iter1)->TypObiektu() == OB_GoraZGrania || (*Iter1)->TypObiektu() == OB_GoraZeSzczytem)
+        {
+        if(AktualnyNumerPrzeszkody == NumerPrzeszkody)
+            {
+            ListaObiektow.remove(*Iter1);
+            Lacze.UsunWszystkieNazwyPlikow();
+            /*for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter2 = ListaObiektow.begin();  Iter2 != ListaObiektow.end();  ++Iter2)
+                {
+                if((*Iter2)->TypObiektu() == OB_Plaskowyz || (*Iter2)->TypObiektu() == OB_GoraZGrania || (*Iter2)->TypObiektu() == OB_GoraZeSzczytem)
+                    {
+                    (*this).DodajNazwePliku(("../data/" + (*Iter2)->WezNazweBryly(0) + ".dat"));
+                    }
+                if((*Iter2)->TypObiektu() == OB_Dron)
+                    {
+                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(0));
+                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(1));
+                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(2));
+                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(3));
+                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(4));
+                    }
+                } PRZEROB TO NA OSOBNA FUNKCJE : USUN NAZWE PLIKU.*/
+            return true;
+            }
+        else 
+            {
+            ++AktualnyNumerPrzeszkody;
+            }
+        }
+    }
+return false;
+
 }
 
 /*!
@@ -113,7 +244,7 @@ Dron& Scena::AktywnyDron()
  */
  bool Scena::PrzemiescDrona(double Odleglosc, double Kat)
  {
- if(!(*this).AktywnyDron().PrzemiescDrona(Odleglosc, Kat, Lacze))
+ if(!(*this).AktywnyDron()->PrzemiescDrona(Odleglosc, Kat, Lacze))
     {
     return false;
     }
@@ -128,7 +259,7 @@ return true;
  */
 bool Scena::RuchPoOkregu(double Promien)
  {
- if(!(*this).AktywnyDron().RuchPoOkregu(Promien, Lacze))
+ if(!(*this).AktywnyDron()->RuchPoOkregu(Promien, Lacze))
     {
     return false;
     }

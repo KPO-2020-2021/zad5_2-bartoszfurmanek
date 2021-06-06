@@ -7,6 +7,7 @@
 #include "BrylaGeometryczna.hh"
 #include <iomanip>
 #include <fstream>
+#include "ObiektSceny.hh"
 
 
 /*!
@@ -25,7 +26,7 @@
  * Klasa dziedziczy po klasie BrylaGeometryczna.
  *
  */
-class GoraZeSzczytem: public BrylaGeometryczna{
+class GoraZeSzczytem: public BrylaGeometryczna, public ObiektSceny{
 
 /*!
  * \brief Wierzcholki
@@ -140,6 +141,8 @@ public:
  * \brief Metoda odczytuje wspolrzedne gory ze szczytem z pliku ze wzorcem prostopadloscianu.
  */
   bool OdczytajBryleWzorcowa();
+
+  std::string WezNazweBryly(int NumerBryly)const;
 
 
 

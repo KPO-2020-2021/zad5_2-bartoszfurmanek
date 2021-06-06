@@ -80,22 +80,22 @@ unit_tests_EXTERNAL_OBJECTS = \
 "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o" \
 "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/lacze_do_gnuplota.cpp.o" \
 "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Graniastoslup.cpp.o" \
-"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Dron.cpp.o" \
-"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Scena.cpp.o" \
 "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Plaskowyz.cpp.o" \
 "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/GoraZGrania.cpp.o" \
-"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o"
+"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o" \
+"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Dron.cpp.o" \
+"/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles/engine.dir/src/Scena.cpp.o"
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/main.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/Macierz3x3.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/lacze_do_gnuplota.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/Graniastoslup.cpp.o
-unit_tests: CMakeFiles/engine.dir/src/Dron.cpp.o
-unit_tests: CMakeFiles/engine.dir/src/Scena.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/Plaskowyz.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/GoraZGrania.cpp.o
 unit_tests: CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o
+unit_tests: CMakeFiles/engine.dir/src/Dron.cpp.o
+unit_tests: CMakeFiles/engine.dir/src/Scena.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../unit_tests"

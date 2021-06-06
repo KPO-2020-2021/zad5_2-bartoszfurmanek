@@ -8,6 +8,22 @@
  */
 
 /*!
+ *\brief Operator przypisania dla klasy Dron
+ *\param[in] D - Dron, ktorego parametry maja zostac przypisane
+ *\retval Dron z nowymi parametrami
+ */
+Dron& Dron::operator= (Dron D)
+{
+  (*this).Korpus = D.Korpus;
+  (*this).Rotor[0] = D.Rotor[0];
+  (*this).Rotor[1] = D.Rotor[1];
+  (*this).Rotor[2] = D.Rotor[2];
+  (*this).Rotor[3] = D.Rotor[3];
+  (*this).Polozenie = D.WspolPolozenia();
+  (*this).KatOrientacji = D.Orientacja();
+  return (*this);
+}
+/*!
  *\brief Metoda uzyskujaca wektor3D reprezentujacy wspolrzedne polozenia drona.
  *\retval Wektor3D reprezentujacy wspolrzedne polozenia drona.
  */
@@ -20,7 +36,7 @@ Wektor3D Dron::WspolPolozenia()const
  *\brief Metoda uzyskujaca dostep do wektora3D reprezentujacego wspolrzedne polozenia drona.
  *\retval referencja do Wektora3D reprezentujacego wspolrzedne polozenia drona.
  */
-Wektor3D& Dron::WspolPolozenia()
+Wektor3D& Dron::WspolPolozenia() 
 {
     return Polozenie;
 }
@@ -62,7 +78,8 @@ void Dron::ObliczPolozenie()
 /*!
  *\brief Konstruktor bezparametryczny drona.
  */
-Dron::Dron()
+Dron::Dron():
+ObiektSceny(OB_Dron)
 {
     Korpus = Prostopadloscian();
     Rotor[0] = Graniastoslup();
@@ -79,7 +96,8 @@ Dron::Dron()
  *\param[in] Kat - kat orientacji korpusu drona.
  *\param[in] Nazwa - nazwa drona.
  */
-Dron::Dron(Wektor3D PolozenieDrona,double Kat, std::string Nazwa)
+Dron::Dron(Wektor3D PolozenieDrona,double Kat, std::string Nazwa):
+ObiektSceny(OB_Dron)
 {
     Korpus = Prostopadloscian(PolozenieDrona, Kat, "../data/" + Nazwa + "_Korpus.dat", "../BrylyWzorcowe/ProstopadloscianWzorcowy.dat", Wektor3D{5,5,5});
     Rotor[0] = Graniastoslup(Korpus[1], Kat, "../data/" + Nazwa+"_Rotor1.dat", "../BrylyWzorcowe/GraniastoslupWzorcowy.dat", Wektor3D{4,4,4});
@@ -99,6 +117,7 @@ Dron::Dron(Wektor3D PolozenieDrona,double Kat, std::string Nazwa)
     }    
   }
     (*this).ObliczPolozenie();
+    (*this).ZapiszBryly();
 }
 /*!
  *\brief Metoda zapisujaca korpus i rotory dron do plikow z ich brylami.
@@ -714,3 +733,19 @@ bool Dron::RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplota)
 
         return true;
     }
+
+std::string Dron::WezNazweBryly(int NumerBryly)const
+{
+if(NumerBryly==0)
+    {
+    return (*this).Korpus.NazwaPlikuBryly();
+    }
+else if (NumerBryly >0 && NumerBryly <5)
+    {
+    return (*this).Rotor[NumerBryly].NazwaPlikuBryly();
+    }
+else
+    {
+    throw std::runtime_error("Blad: Zly numer bryly");
+    }
+}

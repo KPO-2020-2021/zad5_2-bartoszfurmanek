@@ -109,35 +109,9 @@ CMakeFiles/engine.dir/src/Graniastoslup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Graniastoslup.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Graniastoslup.cpp" -o CMakeFiles/engine.dir/src/Graniastoslup.cpp.s
 
-CMakeFiles/engine.dir/src/Dron.cpp.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/src/Dron.cpp.o: ../src/Dron.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/src/Dron.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Dron.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp"
-
-CMakeFiles/engine.dir/src/Dron.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/Dron.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp" > CMakeFiles/engine.dir/src/Dron.cpp.i
-
-CMakeFiles/engine.dir/src/Dron.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Dron.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp" -o CMakeFiles/engine.dir/src/Dron.cpp.s
-
-CMakeFiles/engine.dir/src/Scena.cpp.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/src/Scena.cpp.o: ../src/Scena.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/engine.dir/src/Scena.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Scena.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp"
-
-CMakeFiles/engine.dir/src/Scena.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/Scena.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp" > CMakeFiles/engine.dir/src/Scena.cpp.i
-
-CMakeFiles/engine.dir/src/Scena.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Scena.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp" -o CMakeFiles/engine.dir/src/Scena.cpp.s
-
 CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/Plaskowyz.cpp.o: ../src/Plaskowyz.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/engine.dir/src/Plaskowyz.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/src/Plaskowyz.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Plaskowyz.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Plaskowyz.cpp"
 
 CMakeFiles/engine.dir/src/Plaskowyz.cpp.i: cmake_force
@@ -150,7 +124,7 @@ CMakeFiles/engine.dir/src/Plaskowyz.cpp.s: cmake_force
 
 CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/GoraZGrania.cpp.o: ../src/GoraZGrania.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/src/GoraZGrania.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/engine.dir/src/GoraZGrania.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/GoraZGrania.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZGrania.cpp"
 
 CMakeFiles/engine.dir/src/GoraZGrania.cpp.i: cmake_force
@@ -163,7 +137,7 @@ CMakeFiles/engine.dir/src/GoraZGrania.cpp.s: cmake_force
 
 CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o: ../src/GoraZeSzczytem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZeSzczytem.cpp"
 
 CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.i: cmake_force
@@ -174,15 +148,41 @@ CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZeSzczytem.cpp" -o CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.s
 
+CMakeFiles/engine.dir/src/Dron.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/src/Dron.cpp.o: ../src/Dron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/engine.dir/src/Dron.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Dron.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp"
+
+CMakeFiles/engine.dir/src/Dron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/Dron.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp" > CMakeFiles/engine.dir/src/Dron.cpp.i
+
+CMakeFiles/engine.dir/src/Dron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Dron.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp" -o CMakeFiles/engine.dir/src/Dron.cpp.s
+
+CMakeFiles/engine.dir/src/Scena.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/src/Scena.cpp.o: ../src/Scena.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/engine.dir/src/Scena.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/src/Scena.cpp.o -c "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp"
+
+CMakeFiles/engine.dir/src/Scena.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/src/Scena.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp" > CMakeFiles/engine.dir/src/Scena.cpp.i
+
+CMakeFiles/engine.dir/src/Scena.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/src/Scena.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp" -o CMakeFiles/engine.dir/src/Scena.cpp.s
+
 engine: CMakeFiles/engine.dir/src/Macierz3x3.cpp.o
 engine: CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o
 engine: CMakeFiles/engine.dir/src/lacze_do_gnuplota.cpp.o
 engine: CMakeFiles/engine.dir/src/Graniastoslup.cpp.o
-engine: CMakeFiles/engine.dir/src/Dron.cpp.o
-engine: CMakeFiles/engine.dir/src/Scena.cpp.o
 engine: CMakeFiles/engine.dir/src/Plaskowyz.cpp.o
 engine: CMakeFiles/engine.dir/src/GoraZGrania.cpp.o
 engine: CMakeFiles/engine.dir/src/GoraZeSzczytem.cpp.o
+engine: CMakeFiles/engine.dir/src/Dron.cpp.o
+engine: CMakeFiles/engine.dir/src/Scena.cpp.o
 engine: CMakeFiles/engine.dir/build.make
 
 .PHONY : engine
