@@ -302,6 +302,12 @@ StrmWej >> Wierzcholek[15];
   return !StrmPlikowy.fail();
   }
 
+/*!
+ *\brief Metoda zwracajaca nazwe pliku wybranej bryly obiektu sceny.
+ *\param[in] NumerBryly - Numer bryly, ktorej nazwa ma zostac zwrocona.
+ * Dla klasy Plaskowyz numer nie ma znaczenia.
+ * \return Nazwa pliku wybranej bryly.
+ */
 std::string Plaskowyz::WezNazweBryly(int NumerBryly)const
 {
   NumerBryly++;

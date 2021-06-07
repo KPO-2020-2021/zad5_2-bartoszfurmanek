@@ -142,6 +142,9 @@ public:
  */
   bool OdczytajBryleWzorcowa();
 
+/*!
+ *\brief Metoda zwracajaca nazwe wybranej bryly obiektu sceny.
+ */
   std::string WezNazweBryly(int NumerBryly)const;
 
 

@@ -45,6 +45,16 @@
  */
  int NrAktywnegoDrona;
 
+ /*!
+ *\brief Metoda dodajaca do lacza gnuplot nazwe pliku z rysowana bryla.
+ */
+ bool DodajNazwePliku(std::string NazwaPliku);
+
+ /*!
+ *\brief Metoda usuwajaca nazwe pliku wybranej przeszkody
+ */
+ void UsunNazwePrzeszkody(std::string const NazwaPlikuPrzeszkody);
+
  public:
 
 /*!
@@ -56,11 +66,6 @@
  *\brief Metoda dodajaca drona do sceny.
  */
  void DodajDrona(Wektor3D Polozenie, double Kat, std::string NazwaDrona);
-
-/*!
- *\brief Metoda dodajaca do lacza gnuplot nazwe pliku z rysowana bryla.
- */
- bool DodajNazwePliku(std::string NazwaPliku);
 
 
 /*!
@@ -83,13 +88,21 @@
  */
  void ListaDronow();
 
+/*!
+ *\brief Metoda wypisujaca na strumieniu wyjsciowym liste przeszkod znajdujacych na scenie.
+ */
  void ListaPrzeszkod();
 
+/*!
+ *\brief Metoda usuwajaca z listy wybrana przeszkode.
+ */
  bool UsunPrzeszkode(int NumerPrzeszkody);
 
- void DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody);
+/*!
+ *\brief Metoda dodawajaca do sceny wybrana przeszkode
+ */
+ bool DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody);
 
- void UsunNazwePrzeszkody(std::string const NazwaPlikuPrzeszkody);
 
 /*!
  *\brief Metoda wyswietlajaca w sposob aniomowany obrot aktynwego drona o zadany kat,

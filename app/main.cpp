@@ -142,6 +142,7 @@ int main() {
             std::cout << "1 - Plaskowyz" << std::endl;
             std::cout << "2 - Gora z grania" << std::endl;
             std::cout << "3 - Gora ze szczytem" << std::endl << std::endl;
+            std::cout << "Numer obiektu: ";
             std::cin >> NumerObiektu;
             std::cin.ignore(100000,'\n');
             if(NumerObiektu < 1 || NumerObiektu > 3)
@@ -157,8 +158,14 @@ int main() {
             std::cin.ignore(100000,'\n');
             std::cout << "Podaj nazwe obiektu: ";
             std::cin >> NazwaObiektu;
-            Sc.DodajPrzeszkode(NumerObiektu, {x,y,0}, 0, Skala, NazwaObiektu);
-            std::cout << std::endl << "Element został dodany do sceny" << std::endl << std::endl;
+            if(Sc.DodajPrzeszkode(NumerObiektu, {x,y,0}, 0, Skala, NazwaObiektu))
+              {
+              std::cout << std::endl << "Element został dodany do sceny" << std::endl << std::endl;
+              }
+            else
+              {
+              std::cout << std::endl << std::endl << "Obiekt o takim numerze nie istnieje" << std::endl; 
+              }
             break;
             }
           case 'u':

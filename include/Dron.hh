@@ -167,6 +167,9 @@ bool UzyjWzorca();
  */
  bool RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplot);
 
+/*!
+ *\brief Metoda zwracajaca nazwe wybranej bryly obiektu sceny.
+ */
  std::string WezNazweBryly(int NumerBryly)const;
 
 };

@@ -544,6 +544,12 @@ bool Dron::RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplota)
 
         int i=0;
 
+        if(Promien <= 0)
+            {
+            std::cout << std::endl << "Promien nie moze byc mniejszy badz rowny zero" << std::endl << std::endl;
+            return false;
+            }
+
         if(Promien<0)
             {
             std::cout << std::endl << "Promien nie moze być ujemny!" << std::endl;
@@ -734,6 +740,13 @@ bool Dron::RuchPoOkregu(double Promien, PzG::LaczeDoGNUPlota  &LaczeDoGnuplota)
         return true;
     }
 
+/*!
+ *\brief Metoda zwracajaca nazwe pliku wybranej bryly obiektu sceny.
+ *\param[in] NumerBryly - Numer bryly, ktorej nazwa ma zostac zwrocona.
+ * Dla klasy Dron wartosc 0 zwraca nazwe korpusu, natomiast wartosci od
+ * 1 do 4 zwracaja nazwy odpowiednich rotorow.
+ * \return Nazwa pliku wybranej bryly.
+ */
 std::string Dron::WezNazweBryly(int NumerBryly)const
 {
 if(NumerBryly==0)

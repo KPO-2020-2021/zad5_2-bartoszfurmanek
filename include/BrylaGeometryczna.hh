@@ -29,10 +29,9 @@ enum TypBrylyGeometrycznej {
 /*!
  * \brief Klasa BrylaGeometryczna
  *  Klasa modeluje pojęcie bryly geometrycznej.
- *  Klasa jest baza dla dziedziczenia klas Prostopadloscian
- *  i Graniastoslup. Kazda bryla posiada nazwe bryly wzorcowej
- *  oraz bryly finalnej. Dodatkowo kazda bryla posiada identyfikator
- *  mowiacy jakiego typu bryla jest.
+ *  Klasa jest baza dla dziedziczenia klas modelujacych bryly geometryczne. 
+ *  Kazda bryla posiada nazwe bryly wzorcowej oraz bryly finalnej. 
+ *  Dodatkowo kazda bryla posiada identyfikator mowiacy jakiego typu bryla jest.
  */
 class BrylaGeometryczna {
 

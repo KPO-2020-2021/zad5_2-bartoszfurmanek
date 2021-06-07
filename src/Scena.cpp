@@ -126,6 +126,9 @@ for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begi
 std::cout << std::endl;
 }
 
+/*!
+ *\brief Metoda wypisujaca na strumieniu wyjsciowym liste przeszkod znajdujacych na scenie.
+ */
 void Scena::ListaPrzeszkod()
 {
 Plaskowyz* WskPlaskowyz;
@@ -167,7 +170,15 @@ for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begi
 std::cout << std::endl;
 }
 
-void Scena::DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody)
+/*!
+ *\brief Metoda dodawajaca do sceny wybrana przeszkode
+ \param[in] NumerPrzeszkody - 1 - Plaskowyz, 2 - Gora z grania, 3 - gora ze szczytem.
+ \param[in] Polozenie - Wspolrzedne polozenia przeszkody.
+ \param[in] Kat - Kat orientacji przeszkody, wzgledem wlasnej osi OZ.
+ \param[in] NazwaPrzeszkody - Nazwa danej przeszkody
+ \retval True, jezeli przeszkoda zostanie dodana, false jezeli operacja sie nie powiedzie.
+ */
+bool Scena::DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody)
 {
 switch(NumerPrzeszkody)
         {
@@ -175,27 +186,32 @@ switch(NumerPrzeszkody)
             {
             ListaObiektow.push_back(std::make_shared<Plaskowyz>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/ProstopadloscianWzorcowy.dat",Skala));
             (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
-            break;
+            return true;
             }
         case 2:
             {
             ListaObiektow.push_back(std::make_shared<GoraZGrania>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/ProstopadloscianWzorcowy.dat",Skala));
             (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
-            break;
+            return true;
             }
         case 3:
             {
             ListaObiektow.push_back(std::make_shared<GoraZeSzczytem>(Polozenie,Kat,("../data/" + NazwaPrzeszkody + ".dat"),"../BrylyWzorcowe/GraniastoslupWzorcowy.dat",Skala));
             (*this).DodajNazwePliku(("../data/" + NazwaPrzeszkody + ".dat"));
-            break;
+            return true;
             }
         default:
             {
-            break;
+            return false;
             }
         }
 }
 
+/*!
+ *\brief Metoda usuwajaca wybrana przeszkode ze sceny.
+ \param[in] NumerPrzeszkody - Numer przeszkody na liscie przeszkod (Drony nie sa wliczane)
+ \retval True, jezeli przeszkoda zostanie usunieta, false jezeli operacja sie nie powiedzie.
+ */
 bool Scena::UsunPrzeszkode(int NumerPrzeszkody)
 {
 int AktualnyNumerPrzeszkody=1;
@@ -217,7 +233,10 @@ for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begi
     }
 return false;
 }
-
+ /*!
+ *\brief Metoda usuwajaca nazwe pliku wybranej przeszkody
+ *\param[in] NazwaPlikuPrzeszkody - nazwa pliku przeszkody, ktora ma zostac usunieta.
+ */
 void Scena::UsunNazwePrzeszkody(std::string const NazwaPlikuPrzeszkody)
 {
 Lacze.UsunWszystkieNazwyPlikow();

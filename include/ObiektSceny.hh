@@ -23,22 +23,42 @@ enum TypObiektuSceny {
       OB_GoraZeSzczytem      /*! obiekt jest gora ze szczytem */
    };
 
+/*!
+ *\brief Denicja klasy Obiekt Sceny.
+ *Klasa modeluje pojecie obiektu sceny. Klasa jest baza dla
+ *do dziedziczenia dla klas obiektow znajdujacych sie na scenie.
+ *Kazdy obiekt klasy, posiada identyfikator mowiacy o tym, jakim
+ *typem obiektu jest.
+ */
 class ObiektSceny{
 
  private:
 
+/*!
+ *\brief Identyfikator typu obiektu sceny.
+ */
  const TypObiektuSceny _TypObiektu;
 
  protected:
 
+/*!
+ *\brief Konstruktor parametryczny
+ */
  ObiektSceny(TypObiektuSceny Typ = OB_Zaden):
  _TypObiektu(Typ) {}
  
  public:
 
+/*!
+ *\brief Metoda udostepniajaca identyfikator obiektu
+ *\return Typ obiektu
+ */
  TypObiektuSceny TypObiektu()
  {return _TypObiektu;}
 
+/*!
+ *\brief Metoda zwracajaca nazwe wybranej bryly obiektu sceny.
+ */
  virtual std::string WezNazweBryly(int NumerBryly)const=0;
 
 
