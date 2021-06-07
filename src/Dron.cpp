@@ -742,7 +742,7 @@ if(NumerBryly==0)
     }
 else if (NumerBryly >0 && NumerBryly <5)
     {
-    return (*this).Rotor[NumerBryly].NazwaPlikuBryly();
+    return (*this).Rotor[NumerBryly-1].NazwaPlikuBryly();
     }
 else
     {

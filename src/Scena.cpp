@@ -199,29 +199,14 @@ switch(NumerPrzeszkody)
 bool Scena::UsunPrzeszkode(int NumerPrzeszkody)
 {
 int AktualnyNumerPrzeszkody=1;
-for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter1 = ListaObiektow.begin();  Iter1 != ListaObiektow.end();  ++Iter1)
+for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begin();  Iter != ListaObiektow.end();  ++Iter)
     {
-    if((*Iter1)->TypObiektu() == OB_Plaskowyz || (*Iter1)->TypObiektu() == OB_GoraZGrania || (*Iter1)->TypObiektu() == OB_GoraZeSzczytem)
+    if((*Iter)->TypObiektu() == OB_Plaskowyz || (*Iter)->TypObiektu() == OB_GoraZGrania || (*Iter)->TypObiektu() == OB_GoraZeSzczytem)
         {
         if(AktualnyNumerPrzeszkody == NumerPrzeszkody)
             {
-            ListaObiektow.remove(*Iter1);
-            Lacze.UsunWszystkieNazwyPlikow();
-            /*for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter2 = ListaObiektow.begin();  Iter2 != ListaObiektow.end();  ++Iter2)
-                {
-                if((*Iter2)->TypObiektu() == OB_Plaskowyz || (*Iter2)->TypObiektu() == OB_GoraZGrania || (*Iter2)->TypObiektu() == OB_GoraZeSzczytem)
-                    {
-                    (*this).DodajNazwePliku(("../data/" + (*Iter2)->WezNazweBryly(0) + ".dat"));
-                    }
-                if((*Iter2)->TypObiektu() == OB_Dron)
-                    {
-                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(0));
-                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(1));
-                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(2));
-                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(3));
-                    (*this).DodajNazwePliku((*Iter2)->WezNazweBryly(4));
-                    }
-                } PRZEROB TO NA OSOBNA FUNKCJE : USUN NAZWE PLIKU.*/
+            (*this).UsunNazwePrzeszkody((*Iter)->WezNazweBryly(0));
+            ListaObiektow.remove(*Iter);
             return true;
             }
         else 
@@ -231,6 +216,30 @@ for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter1 = ListaObiektow.beg
         }
     }
 return false;
+}
+
+void Scena::UsunNazwePrzeszkody(std::string const NazwaPlikuPrzeszkody)
+{
+Lacze.UsunWszystkieNazwyPlikow();
+(*this).DodajNazwePliku("../BrylyWzorcowe/Plaszczyzna.dat");
+for (std::list<std::shared_ptr<ObiektSceny>>::iterator Iter = ListaObiektow.begin();  Iter != ListaObiektow.end();  ++Iter)
+    {
+    if((*Iter)->TypObiektu() == OB_Plaskowyz || (*Iter)->TypObiektu() == OB_GoraZGrania || (*Iter)->TypObiektu() == OB_GoraZeSzczytem)
+        {
+        if((*Iter)->WezNazweBryly(0) != NazwaPlikuPrzeszkody)
+            {
+            (*this).DodajNazwePliku((*Iter)->WezNazweBryly(0));
+            }
+        }
+    if((*Iter)->TypObiektu() == OB_Dron)
+        {
+        (*this).DodajNazwePliku((*Iter)->WezNazweBryly(0));
+        (*this).DodajNazwePliku((*Iter)->WezNazweBryly(1));
+        (*this).DodajNazwePliku((*Iter)->WezNazweBryly(2));
+        (*this).DodajNazwePliku((*Iter)->WezNazweBryly(3));
+        (*this).DodajNazwePliku((*Iter)->WezNazweBryly(4));
+        }
+    }
 
 }
 

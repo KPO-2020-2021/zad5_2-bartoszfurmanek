@@ -12,22 +12,6 @@ string
 Wektor3D.hh
 ../include/Wektor3D.hh
 
-../include/Dron.hh
-string
--
-Prostopadloscian.hh
-../include/Prostopadloscian.hh
-Graniastoslup.hh
-../include/Graniastoslup.hh
-Wektor3D.hh
-../include/Wektor3D.hh
-lacze_do_gnuplota.hh
-../include/lacze_do_gnuplota.hh
-unistd.h
--
-ObiektSceny.hh
-../include/ObiektSceny.hh
-
 ../include/GoraZGrania.hh
 iostream
 -
@@ -43,44 +27,6 @@ fstream
 -
 ObiektSceny.hh
 ../include/ObiektSceny.hh
-
-../include/GoraZeSzczytem.hh
-iostream
--
-Wektor3D.hh
-../include/Wektor3D.hh
-Macierz3x3.hh
-../include/Macierz3x3.hh
-BrylaGeometryczna.hh
-../include/BrylaGeometryczna.hh
-iomanip
--
-fstream
--
-ObiektSceny.hh
-../include/ObiektSceny.hh
-
-../include/Graniastoslup.hh
-iostream
--
-Wektor3D.hh
-../include/Wektor3D.hh
-Wektor.hh
-../include/Wektor.hh
-Macierz3x3.hh
-../include/Macierz3x3.hh
-Macierz.hh
-../include/Macierz.hh
-BrylaGeometryczna.hh
-../include/BrylaGeometryczna.hh
-tgmath.h
--
-math.h
--
-iomanip
--
-fstream
--
 
 ../include/Macierz.hh
 Wektor.hh
@@ -101,56 +47,6 @@ lacze_do_gnuplota.hh
 ../include/lacze_do_gnuplota.hh
 BrylaGeometryczna.hh
 ../include/BrylaGeometryczna.hh
-
-../include/Plaskowyz.hh
-iostream
--
-Wektor3D.hh
-../include/Wektor3D.hh
-Macierz3x3.hh
-../include/Macierz3x3.hh
-BrylaGeometryczna.hh
-../include/BrylaGeometryczna.hh
-iomanip
--
-fstream
--
-ObiektSceny.hh
-../include/ObiektSceny.hh
-
-../include/Prostopadloscian.hh
-iostream
--
-Wektor3D.hh
-../include/Wektor3D.hh
-Macierz3x3.hh
-../include/Macierz3x3.hh
-BrylaGeometryczna.hh
-../include/BrylaGeometryczna.hh
-tgmath.h
--
-math.h
--
-iomanip
--
-fstream
--
-
-../include/Scena.hh
-Dron.hh
-../include/Dron.hh
-Plaskowyz.hh
-../include/Plaskowyz.hh
-GoraZeSzczytem.hh
-../include/GoraZeSzczytem.hh
-GoraZGrania.hh
-../include/GoraZGrania.hh
-lacze_do_gnuplota.hh
-../include/lacze_do_gnuplota.hh
-list
--
-memory
--
 
 ../include/Wektor.hh
 iostream
@@ -174,13 +70,7 @@ list
 vector
 -
 
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.cpp
-Dron.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Dron.hh
-Wektor3D.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Wektor3D.hh
-
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.cpp
-Scena.hh
-/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/Scena.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZGrania.cpp
+GoraZGrania.hh
+/home/bartoszfurmanek/Pulpit/Programowanie obiektowe/zad5_2-bartoszfurmanek/src/GoraZGrania.hh
 

@@ -89,6 +89,8 @@
 
  void DodajPrzeszkode(int NumerPrzeszkody, Wektor3D Polozenie, double Kat, Wektor3D Skala, std::string NazwaPrzeszkody);
 
+ void UsunNazwePrzeszkody(std::string const NazwaPlikuPrzeszkody);
+
 /*!
  *\brief Metoda wyswietlajaca w sposob aniomowany obrot aktynwego drona o zadany kat,
  * oraz jego przelot o zadana odleglosc.

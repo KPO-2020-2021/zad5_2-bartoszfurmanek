@@ -131,10 +131,16 @@ GoraZGrania::GoraZGrania(Wektor3D WspolPolozenia, double Kat, std::string Nazwa,
 BrylaGeometryczna(TB_GoraZGrania, Nazwa, NazwaWzorca, SkalaBryly), ObiektSceny(OB_GoraZGrania), Polozenie(WspolPolozenia), KatOrientacji(Kat)
 {
 (*this).OdczytajBryleWzorcowa();
-Wierzcholek[1]= Wektor3D{0,-5,10};          //Przeksztalcenie gornych wierzcholkow aby utworzyly granie gory.
-Wierzcholek[5]= Wektor3D{0,-5,10};
-Wierzcholek[2]= Wektor3D{0,5,10};
-Wierzcholek[6]= Wektor3D{0,5,10};
+Wierzcholek[5] = Wierzcholek[1];          //Przeksztalcenie odpowiednich wierzcholkow, aby uzyskac gore z grania.
+Wierzcholek[6] = Wierzcholek[2];
+Wierzcholek[0] = Wierzcholek[9];
+Wierzcholek[4] = Wierzcholek[9];
+Wierzcholek[8] = Wierzcholek[9];
+Wierzcholek[12] = Wierzcholek[9];
+Wierzcholek[3] = Wierzcholek[10];
+Wierzcholek[7] = Wierzcholek[10];
+Wierzcholek[11] = Wierzcholek[10];
+Wierzcholek[15] = Wierzcholek[10];
 for(int i=0; i<16; i++)
     {
     Wierzcholek[i] = (*this).Skaluj(Wierzcholek[i]);
