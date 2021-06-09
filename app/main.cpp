@@ -32,9 +32,9 @@ int main() {
     Sc.DodajDrona({20,20,0}, 0, "Dron1");                //Dodanie dronow do scemy
     Sc.DodajDrona({20,100,0}, 0, "Dron2");
 
-    Sc.DodajPrzeszkode(1, {100,100,0}, 0, {10,10,5}, "Plaskowyz1");
-    Sc.DodajPrzeszkode(2, {50,150,0}, 0, {40,10,40}, "GoraZGrania1");
-    Sc.DodajPrzeszkode(3, {150,50,0}, 0, {20,20,100}, "GoraZeszczytem1");
+    Sc.DodajPrzeszkode(1, {100,100,0}, 45, {10,10,5}, "Plaskowyz1");
+    Sc.DodajPrzeszkode(2, {50,150,0}, 270, {10,40,40}, "GoraZGrania1");
+    Sc.DodajPrzeszkode(3, {150,50,0}, 60, {20,20,100}, "GoraZeszczytem1");
     Sc.DodajPrzeszkode(3, {180,180,0}, 0, {10,10,50}, "GoraZeSzczytem2");
     
     Sc.NumerAktywnegoDrona()=1;                            //Domyslnie dron pierwszy jest aktywny
@@ -153,12 +153,15 @@ int main() {
             std::cout << "Podaj Wspolrzedne polozenia obiekty (x,y): ";
             std::cin >> x >> y;
             std::cin.ignore(100000,'\n');
+            std::cout << "Podaj kat obrotu bryly: ";
+            std::cin >> Kat;
+            std::cin.ignore(100000,'\n');
             std::cout << "Podaj skale OX, OY, OZ: ";
             std::cin >> Skala;
             std::cin.ignore(100000,'\n');
             std::cout << "Podaj nazwe obiektu: ";
             std::cin >> NazwaObiektu;
-            if(Sc.DodajPrzeszkode(NumerObiektu, {x,y,0}, 0, Skala, NazwaObiektu))
+            if(Sc.DodajPrzeszkode(NumerObiektu, {x,y,0}, Kat, Skala, NazwaObiektu))
               {
               std::cout << std::endl << "Element został dodany do sceny" << std::endl << std::endl;
               }
